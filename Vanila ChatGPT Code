@@ -1,0 +1,34 @@
+<!-- Version 1 to na pede mo pa iedit kasi meron tong button -->
+
+<p id="portfolioText" style="margin-top: 30px; text-align: left;">
+  Welcome to my Website Portfolio! I'm a self-taught Front-End Web Developer, passionate about crafting captivating and functional web experiences. 
+  With a strong foundation in HTML, CSS, and JavaScript, I bring together design and technology to create visually stunning websites.
+  Join me on this exciting journey where creativity meets technology. Let's make an impact together! Together, let's transform your ideas into remarkable online experiences that leave a lasting impression.
+</p>
+<button id="seeMoreButton" onclick="toggleText()">See More</button>
+
+<script>
+  function toggleText() {
+    var text = document.getElementById("portfolioText");
+    var button = document.getElementById("seeMoreButton");
+
+    if (text.style.display === "none") {
+      text.style.display = "block";
+      button.innerHTML = "See Less";
+    } else {
+      text.style.display = "none";
+      button.innerHTML = "See More";
+    }
+  }
+
+  // Check if the page is loaded on a mobile device or tablet
+  function isMobileOrTablet() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
+
+  // Hide the text initially on mobile and tablet devices
+  if (isMobileOrTablet()) {
+    var text = document.getElementById("portfolioText");
+    text.style.display = "none";
+  }
+</script>
